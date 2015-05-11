@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>touch</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no"/>
+    <style type="text/css">
+    body,html{
+        margin:0px;
+        padding:0px;
+        height:100%;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="text-desc">当前无事件</div>
+    <script type="text/javascript" src="../js/touch.js"></script>
+    <script type="text/javascript">
+    var body = document.body;
+    var text = document.getElementById('text-desc');
+    var str  = '事件:';
+    body.addEventListener('tap',function(){
+        text.innerText = str + 'tap';
+    },false);
+
+    body.addEventListener('dbtap',function(){
+        text.innerText = str + 'dbtap';
+    },false);
+
+    body.addEventListener('hold',function(){
+        text.innerText = str + 'hold';
+    },false);
+
+    body.addEventListener('swipRight',function(){
+        text.innerText = str + 'swipRight';
+    },false);
+
+    body.addEventListener('swipLeft',function(){
+        text.innerText = str + 'swipLeft';
+    },false);
+
+    body.addEventListener('swipDown',function(){
+        text.innerText = str + 'swipDown';
+    },false);
+
+    body.addEventListener('swipUp',function(){
+        text.innerText = str + 'swipUp';
+    },false);
+
+    </script>
+</body>
+</html>
